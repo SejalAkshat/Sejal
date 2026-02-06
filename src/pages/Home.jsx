@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import InstallApp from '../components/InstallApp';
 import './Home.css';
 
 export default function Home() {
@@ -43,6 +44,7 @@ export default function Home() {
               <p>A letter in her memory.</p>
             </Link>
           </div>
+          <InstallApp />
         </div>
       </section>
     </div>

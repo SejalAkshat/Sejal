@@ -18,11 +18,11 @@ export default defineConfig({
         theme_color: '#FDF8F3',
         background_color: '#FDF8F3',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: './',
+        scope: './',
         icons: [
           {
-            src: '/icon.svg',
+            src: './icon.svg',
             sizes: 'any',
             type: 'image/svg+xml',
             purpose: 'any maskable'
