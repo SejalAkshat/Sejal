@@ -1,0 +1,101 @@
+.our-story-page {
+  padding-bottom: 4rem;
+}
+
+.story-hero {
+  padding: 4rem 0 2rem;
+}
+
+.story-timeline {
+  padding: 0 0 3rem;
+}
+
+.story-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.story-step:last-child {
+  padding-bottom: 0;
+}
+
+.story-step-marker {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+.story-step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-burgundy);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px var(--color-blush);
+}
+
+.story-step-content {
+  padding-bottom: 0;
+}
+
+.story-step-year {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.story-step-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem;
+  color: var(--color-burgundy);
+}
+
+.story-step-text {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.story-quote {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, transparent 0%, var(--color-cream-dark) 50%, transparent 100%);
+}
+
+.quote-block {
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  border: none;
+}
+
+.quote-block p {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-burgundy);
+  line-height: 1.5;
+  max-width: 28ch;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .story-step {
+    gap: 2rem;
+  }
+
+  .story-step-dot {
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 5px var(--color-blush);
+  }
+}

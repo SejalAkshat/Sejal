@@ -1,0 +1,55 @@
+.for-you-page {
+  padding-bottom: 4rem;
+}
+
+.for-you-hero {
+  padding: 4rem 0 2rem;
+}
+
+.letter-section {
+  padding: 0 0 4rem;
+}
+
+.letter {
+  background: var(--color-white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(232, 213, 208, 0.6);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 640px) {
+  .letter {
+    padding: 3rem 3rem;
+  }
+}
+
+.letter-opening,
+.letter-closing {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-burgundy);
+  margin: 0 0 1rem;
+}
+
+.letter p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.letter p:last-of-type {
+  margin-bottom: 0;
+}
+
+.letter-closing {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.letter-signature {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--color-rose-deep);
+}

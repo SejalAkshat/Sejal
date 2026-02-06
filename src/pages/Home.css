@@ -1,0 +1,197 @@
+.home-page {
+  padding-top: 0;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--header-height) 1.25rem 4rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, var(--color-cream) 0%, var(--color-blush) 40%, var(--color-rose) 100%);
+  opacity: 0.95;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 20%, var(--color-gold-light) 0%, transparent 50%);
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 36rem;
+}
+
+.hero-label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+  margin: 0 0 0.5rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 600;
+  color: var(--color-burgundy-dark);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  margin: 0 0 2.5rem;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition), box-shadow var(--transition), color var(--transition), background var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-burgundy);
+  color: var(--color-cream);
+  border: 2px solid var(--color-burgundy);
+}
+
+.btn-primary:hover {
+  background: var(--color-burgundy-dark);
+  border-color: var(--color-burgundy-dark);
+  color: var(--color-cream);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-burgundy);
+  border: 2px solid var(--color-rose);
+}
+
+.btn-secondary:hover {
+  background: rgba(201, 169, 160, 0.2);
+  border-color: var(--color-rose-deep);
+  color: var(--color-burgundy-dark);
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-burgundy);
+  opacity: 0.6;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Intro section */
+.home-intro {
+  padding: 5rem 0;
+}
+
+.intro-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .intro-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.intro-card {
+  display: block;
+  padding: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(232, 213, 208, 0.6);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  text-align: center;
+  color: inherit;
+}
+
+.intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-float);
+  border-color: var(--color-blush);
+}
+
+.intro-card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.intro-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-burgundy);
+}
+
+.intro-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
